@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataDash</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">DataDash</h1>
+    <div class="search-bar">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Rechercher une ville..."
+      />
+      <button id="search-btn" type="button" class="search-btn">Chercher</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="loader" class="loader" hidden>Chargement...</div>
+    <div id="error-message" class="error-message" hidden></div>
+
+    <section id="history-section" class="history-section" hidden>
+      <span class="history-label">Recherches récentes :</span>
+      <div id="history-tags" class="history-tags"></div>
+    </section>
+
+    <section id="dashboard" class="dashboard" hidden>
+      <div class="widget widget-main">
+        <h2 id="city-name"></h2>
+        <img id="weather-icon" class="weather-icon" alt="" />
+        <p id="temperature" class="temperature"></p>
+        <p id="description" class="description"></p>
+      </div>
+      <div class="widget">
+        <h3>Humidité</h3>
+        <p id="humidity" class="widget-value"></p>
+      </div>
+      <div class="widget">
+        <h3>Vent</h3>
+        <p id="wind" class="widget-value"></p>
+      </div>
+      <div class="widget">
+        <h3>Ressenti</h3>
+        <p id="feels-like" class="widget-value"></p>
+      </div>
+    </section>
+
+    <section id="forecast-section" class="forecast-section" hidden>
+      <h2>Prévisions 5 jours</h2>
+      <div id="forecast-grid" class="forecast-grid"></div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

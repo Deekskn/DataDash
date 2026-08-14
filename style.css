@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f0f0f0;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: #1c1c2b;
+  color: white;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.4rem;
+}
+.search-bar {
+  display: flex;
+  flex: 1;
+  min-width: 240px;
+  gap: 0.5rem;
+}
+.search-input {
+  flex: 1;
+  padding: 0.4rem;
+}
+.search-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: #3a86ff;
+  color: white;
+  cursor: pointer;
+}
+.search-btn:hover {
+  background: #2f6fd9;
+}
+
+.loader,
+.error-message {
+  text-align: center;
+  padding: 2rem;
+}
+.error-message {
+  color: red;
+}
+
+/* Historique */
+.history-section {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.history-label {
+  font-size: 0.85rem;
+  color: #555;
+}
+.history-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.history-tag {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.history-tag:hover {
+  background: #e4e4e4;
+}
+
+/* Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.widget {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.widget h3 {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+.widget-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.widget-main {
+  grid-column: span 2;
+}
+.weather-icon {
+  width: 90px;
+  height: 90px;
+}
+.temperature {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.description {
+  text-transform: capitalize;
+  color: #555;
+}
+
+/* Prévisions */
+.forecast-section {
+  padding: 1rem;
+}
+.forecast-section h2 {
+  padding-bottom: 0.6rem;
+}
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+.forecast-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+}
+.forecast-day {
+  font-size: 0.85rem;
+  color: #555;
+  text-transform: capitalize;
+}
+.forecast-card img {
+  width: 60px;
+  height: 60px;
+}
+.forecast-temp {
+  font-weight: bold;
+}
+.forecast-desc {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: #555;
+}
+
+@media (max-width: 500px) {
+  .widget-main {
+    grid-column: span 1;
+  }
+}
